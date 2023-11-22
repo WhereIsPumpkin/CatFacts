@@ -4,21 +4,27 @@
 //  Created by Saba Gogrichiani on 18.11.23.
 //
 
+//
+//  MainPageViewController.swift
+//
+//  Created by Saba Gogrichiani on 18.11.23.
+//
+
 import UIKit
 
 final class MainPageViewController: UIViewController {
-    
+    // MARK: - Properties
     private var facts = [Fact]()
     private let viewModel = MainPageViewModel()
     
-    // MARK: - UI
-    private var factsTable: UITableView = {
+    // MARK: - UI Elements
+    private lazy var factsTable: UITableView = {
         let tableView = UITableView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
     
-    private var rotatingCat: RotatingImageView = {
+    private lazy var rotatingCat: RotatingImageView = {
         let imageView = RotatingImageView()
         imageView.image = UIImage(systemName: "cat.circle.fill")
         imageView.contentMode = .scaleAspectFit
@@ -26,11 +32,6 @@ final class MainPageViewController: UIViewController {
     }()
     
     // MARK: - LifeCycle
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -42,13 +43,32 @@ final class MainPageViewController: UIViewController {
     }
     
     // MARK: - Private Methods
-    
     private func setup() {
         setupUI()
         setupViewModel()
-        rotatingCat.startRotating()
+        setupRotatingCat()
         viewModel.viewDidLoad()
+        setupNavBar()
+    }
+    
+    private func setupNavBar() {
         setupTitle()
+        setUpNavBarItems()
+    }
+    
+    private func setupTitle() {
+        title = "Facts"
+    }
+    
+    private func setUpNavBarItems() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: self, action: #selector(openSettings))
+    }
+    
+    @objc private func openSettings() {
+        let settingViewController = SettingViewController()
+        settingViewController.setInitialSliderValue(Float(viewModel.limit))
+        settingViewController.delegate = self
+        present(settingViewController, animated: true)
     }
     
     private func setupUI() {
@@ -69,24 +89,29 @@ final class MainPageViewController: UIViewController {
     
     private func setUpActivityIndicator() {
         view.addSubview(rotatingCat)
+        configureRotatingCatConstraints()
+    }
+    
+    private func configureRotatingCatConstraints() {
         rotatingCat.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             rotatingCat.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             rotatingCat.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            rotatingCat.widthAnchor.constraint(equalToConstant: 70), 
+            rotatingCat.widthAnchor.constraint(equalToConstant: 70),
             rotatingCat.heightAnchor.constraint(equalToConstant: 70)
         ])
+    }
+    
+    private func setupRotatingCat() {
+        rotatingCat.startRotating()
     }
     
     private func setupViewModel() {
         viewModel.delegate = self
     }
-    
-    private func setupTitle(){
-        title = "Facts"
-    }
 }
 
+// MARK: - Extensions
 extension MainPageViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         facts.count
@@ -117,3 +142,9 @@ extension MainPageViewController: MainPageViewModelDelegate {
     }
 }
 
+extension MainPageViewController: UpdateLimitDelegate {
+    func updateLimitInViewModel(newLimit: Int) {
+        viewModel.updateLimit(newLimit: newLimit)
+        viewModel.viewDidLoad()
+    }
+}

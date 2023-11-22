@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750536B82B0D6BA600701691 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750536B72B0D6BA600701691 /* SettingViewController.swift */; };
+		750DB1A12B0D65A700D73A3A /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 750DB1A02B0D65A700D73A3A /* Networking */; };
 		7590BCC22B0965410098B527 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590BCC12B0965410098B527 /* Fact.swift */; };
 		7590BCC72B09687F0098B527 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590BCC62B09687F0098B527 /* MainTabBarViewController.swift */; };
 		7590BCCA2B096AA60098B527 /* BreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590BCC92B096AA60098B527 /* BreedViewController.swift */; };
-		7590BCCD2B0983AE0098B527 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590BCCC2B0983AE0098B527 /* APIService.swift */; };
 		7590BCD02B0A4F850098B527 /* MainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590BCCF2B0A4F850098B527 /* MainPageViewModel.swift */; };
 		7590BCD32B0A78660098B527 /* RotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590BCD22B0A78660098B527 /* RotatingImageView.swift */; };
 		7590BCD62B0A948B0098B527 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 7590BCD52B0A948B0098B527 /* Networking */; };
@@ -18,13 +19,16 @@
 		759F25522B094ACD001B6022 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759F25512B094ACD001B6022 /* SceneDelegate.swift */; };
 		759F25542B094ACD001B6022 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759F25532B094ACD001B6022 /* MainPageViewController.swift */; };
 		759F25592B094ACE001B6022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759F25582B094ACE001B6022 /* Assets.xcassets */; };
+		75E5B1FA2B0E567400708D8A /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 75E5B1F92B0E567400708D8A /* Networking */; };
+		75E5B1FD2B0E56BF00708D8A /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 75E5B1FC2B0E56BF00708D8A /* Networking */; };
+		75E5B2002B0E667800708D8A /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 75E5B1FF2B0E667800708D8A /* Networking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		750536B72B0D6BA600701691 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		7590BCC12B0965410098B527 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		7590BCC62B09687F0098B527 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		7590BCC92B096AA60098B527 /* BreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewController.swift; sourceTree = "<group>"; };
-		7590BCCC2B0983AE0098B527 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		7590BCCF2B0A4F850098B527 /* MainPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewModel.swift; sourceTree = "<group>"; };
 		7590BCD22B0A78660098B527 /* RotatingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingImageView.swift; sourceTree = "<group>"; };
 		759F254C2B094ACD001B6022 /* spaceInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spaceInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +44,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E5B1FA2B0E567400708D8A /* Networking in Frameworks */,
+				750DB1A12B0D65A700D73A3A /* Networking in Frameworks */,
+				75E5B1FD2B0E56BF00708D8A /* Networking in Frameworks */,
+				75E5B2002B0E667800708D8A /* Networking in Frameworks */,
 				7590BCD62B0A948B0098B527 /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,9 +55,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		750536B62B0D6A9A00701691 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				750536B72B0D6BA600701691 /* SettingViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7590BCBA2B0956300098B527 /* Facts */ = {
 			isa = PBXGroup;
 			children = (
+				750536B62B0D6A9A00701691 /* Views */,
 				7590BCBB2B0956660098B527 /* Model */,
 				759F25532B094ACD001B6022 /* MainPageViewController.swift */,
 				7590BCCF2B0A4F850098B527 /* MainPageViewModel.swift */,
@@ -65,28 +82,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7590BCC32B09681A0098B527 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				7590BCC62B09687F0098B527 /* MainTabBarViewController.swift */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
 		7590BCC82B096A7F0098B527 /* Breed */ = {
 			isa = PBXGroup;
 			children = (
 				7590BCC92B096AA60098B527 /* BreedViewController.swift */,
 			);
 			path = Breed;
-			sourceTree = "<group>";
-		};
-		7590BCCB2B097AA00098B527 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				7590BCCC2B0983AE0098B527 /* APIService.swift */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		7590BCD12B0A784C0098B527 /* Helpers */ = {
@@ -118,7 +119,6 @@
 			children = (
 				759F25632B094AD9001B6022 /* App */,
 				759F25652B094AF4001B6022 /* Scenes */,
-				7590BCCB2B097AA00098B527 /* Network */,
 				7590BCD12B0A784C0098B527 /* Helpers */,
 				759F25582B094ACE001B6022 /* Assets.xcassets */,
 				759F255D2B094ACE001B6022 /* Info.plist */,
@@ -138,7 +138,7 @@
 		759F25652B094AF4001B6022 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				7590BCC32B09681A0098B527 /* TabBar */,
+				7590BCC62B09687F0098B527 /* MainTabBarViewController.swift */,
 				7590BCBA2B0956300098B527 /* Facts */,
 				7590BCC82B096A7F0098B527 /* Breed */,
 			);
@@ -163,6 +163,10 @@
 			name = spaceInfo;
 			packageProductDependencies = (
 				7590BCD52B0A948B0098B527 /* Networking */,
+				750DB1A02B0D65A700D73A3A /* Networking */,
+				75E5B1F92B0E567400708D8A /* Networking */,
+				75E5B1FC2B0E56BF00708D8A /* Networking */,
+				75E5B1FF2B0E667800708D8A /* Networking */,
 			);
 			productName = spaceInfo;
 			productReference = 759F254C2B094ACD001B6022 /* spaceInfo.app */;
@@ -193,7 +197,7 @@
 			);
 			mainGroup = 759F25432B094ACD001B6022;
 			packageReferences = (
-				7590BCD42B0A948B0098B527 /* XCLocalSwiftPackageReference "../Networking" */,
+				75E5B1FE2B0E667800708D8A /* XCRemoteSwiftPackageReference "NetworkingModule" */,
 			);
 			productRefGroup = 759F254D2B094ACD001B6022 /* Products */;
 			projectDirPath = "";
@@ -223,8 +227,8 @@
 				7590BCD32B0A78660098B527 /* RotatingImageView.swift in Sources */,
 				7590BCD02B0A4F850098B527 /* MainPageViewModel.swift in Sources */,
 				7590BCC72B09687F0098B527 /* MainTabBarViewController.swift in Sources */,
-				7590BCCD2B0983AE0098B527 /* APIService.swift in Sources */,
 				759F25542B094ACD001B6022 /* MainPageViewController.swift in Sources */,
+				750536B82B0D6BA600701691 /* SettingViewController.swift in Sources */,
 				759F25502B094ACD001B6022 /* AppDelegate.swift in Sources */,
 				759F25522B094ACD001B6022 /* SceneDelegate.swift in Sources */,
 				7590BCC22B0965410098B527 /* Fact.swift in Sources */,
@@ -429,16 +433,37 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		7590BCD42B0A948B0098B527 /* XCLocalSwiftPackageReference "../Networking" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Networking;
+/* Begin XCRemoteSwiftPackageReference section */
+		75E5B1FE2B0E667800708D8A /* XCRemoteSwiftPackageReference "NetworkingModule" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WhereIsPumpkin/NetworkingModule";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		750DB1A02B0D65A700D73A3A /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
 		7590BCD52B0A948B0098B527 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		75E5B1F92B0E567400708D8A /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		75E5B1FC2B0E56BF00708D8A /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		75E5B1FF2B0E667800708D8A /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75E5B1FE2B0E667800708D8A /* XCRemoteSwiftPackageReference "NetworkingModule" */;
 			productName = Networking;
 		};
 /* End XCSwiftPackageProductDependency section */

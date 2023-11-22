@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "networkingmodule",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/WhereIsPumpkin/NetworkingModule",
+      "state" : {
+        "branch" : "main",
+        "revision" : "233193162696ccf103cb7b4eda0fdc3b1d97cc04"
+      }
+    }
+  ],
+  "version" : 2
+}
