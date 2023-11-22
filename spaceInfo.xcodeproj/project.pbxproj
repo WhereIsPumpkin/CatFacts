@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		750536B82B0D6BA600701691 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750536B72B0D6BA600701691 /* SettingViewController.swift */; };
 		750DB1A12B0D65A700D73A3A /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 750DB1A02B0D65A700D73A3A /* Networking */; };
+		75173A152B0E6C3700544F4C /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75173A142B0E6C3700544F4C /* Breed.swift */; };
 		7590BCC22B0965410098B527 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590BCC12B0965410098B527 /* Fact.swift */; };
 		7590BCC72B09687F0098B527 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590BCC62B09687F0098B527 /* MainTabBarViewController.swift */; };
 		7590BCCA2B096AA60098B527 /* BreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590BCC92B096AA60098B527 /* BreedViewController.swift */; };
 		7590BCD02B0A4F850098B527 /* MainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590BCCF2B0A4F850098B527 /* MainPageViewModel.swift */; };
 		7590BCD32B0A78660098B527 /* RotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590BCD22B0A78660098B527 /* RotatingImageView.swift */; };
 		7590BCD62B0A948B0098B527 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 7590BCD52B0A948B0098B527 /* Networking */; };
+		7597CB4D2B0E686D0036B1BC /* BreedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597CB4C2B0E686D0036B1BC /* BreedViewModel.swift */; };
 		759F25502B094ACD001B6022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759F254F2B094ACD001B6022 /* AppDelegate.swift */; };
 		759F25522B094ACD001B6022 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759F25512B094ACD001B6022 /* SceneDelegate.swift */; };
 		759F25542B094ACD001B6022 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759F25532B094ACD001B6022 /* MainPageViewController.swift */; };
@@ -26,11 +28,13 @@
 
 /* Begin PBXFileReference section */
 		750536B72B0D6BA600701691 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		75173A142B0E6C3700544F4C /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		7590BCC12B0965410098B527 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		7590BCC62B09687F0098B527 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		7590BCC92B096AA60098B527 /* BreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewController.swift; sourceTree = "<group>"; };
 		7590BCCF2B0A4F850098B527 /* MainPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewModel.swift; sourceTree = "<group>"; };
 		7590BCD22B0A78660098B527 /* RotatingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingImageView.swift; sourceTree = "<group>"; };
+		7597CB4C2B0E686D0036B1BC /* BreedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewModel.swift; sourceTree = "<group>"; };
 		759F254C2B094ACD001B6022 /* spaceInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spaceInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		759F254F2B094ACD001B6022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		759F25512B094ACD001B6022 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		75173A132B0E6C2A00544F4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75173A142B0E6C3700544F4C /* Breed.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7590BCBA2B0956300098B527 /* Facts */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +97,9 @@
 		7590BCC82B096A7F0098B527 /* Breed */ = {
 			isa = PBXGroup;
 			children = (
+				75173A132B0E6C2A00544F4C /* Model */,
 				7590BCC92B096AA60098B527 /* BreedViewController.swift */,
+				7597CB4C2B0E686D0036B1BC /* BreedViewModel.swift */,
 			);
 			path = Breed;
 			sourceTree = "<group>";
@@ -229,10 +243,12 @@
 				7590BCC72B09687F0098B527 /* MainTabBarViewController.swift in Sources */,
 				759F25542B094ACD001B6022 /* MainPageViewController.swift in Sources */,
 				750536B82B0D6BA600701691 /* SettingViewController.swift in Sources */,
+				7597CB4D2B0E686D0036B1BC /* BreedViewModel.swift in Sources */,
 				759F25502B094ACD001B6022 /* AppDelegate.swift in Sources */,
 				759F25522B094ACD001B6022 /* SceneDelegate.swift in Sources */,
 				7590BCC22B0965410098B527 /* Fact.swift in Sources */,
 				7590BCCA2B096AA60098B527 /* BreedViewController.swift in Sources */,
+				75173A152B0E6C3700544F4C /* Breed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
